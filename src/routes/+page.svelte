@@ -1,4 +1,6 @@
 <script>
+	import { IconHeart } from '@tabler/icons-svelte';
+
 	const languages = [
 		{
 			name: 'German'
@@ -6,9 +8,16 @@
 	];
 </script>
 
-<section class="w-full p-4 flex justify-center flex-col gap-4">
+<section class="w-full p-4 flex justify-center items-center flex-col gap-4">
+	<a
+		class="flex gap-2 w-fit hover:bg-main/50 transition-all p-2 rounded-xl items-center text-lg font-semibold"
+		href="https://polgubau.com/"
+	>
+		<IconHeart class="w-6 h-6" />
+		By Pol Gubau Amores
+	</a>
 	<div
-		class="border-2 h-full border-dark rounded-3xl border-b-8 w-full md:h-fit flex flex-col gap-6 md:max-w-xl divide-y-2 divide-dark"
+		class="border-2 h-full border-dark rounded-3xl border-b-8 w-full md:h-fit grid grid-rows-[auto,1fr] gap-6 md:max-w-xl divide-y-2 divide-dark"
 	>
 		<h1 class="text-4xl font-bold text-dark px-4 pt-4">Polyglot</h1>
 		<ul class="p-2 grid sm:grid-cols-2 gap-2">

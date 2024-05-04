@@ -3,8 +3,11 @@
 	import { IconArrowLeft } from '@tabler/icons-svelte';
 </script>
 
-<section class="w-full p-4 flex justify-center flex-col gap-4">
-	<a class="flex gap-2 items-center text-lg font-semibold" href="/">
+<section class="w-full p-4 flex justify-center items-center flex-col gap-4">
+	<a
+		class="flex gap-2 w-fit hover:bg-main/50 transition-all p-2 rounded-xl items-center text-lg font-semibold"
+		href="/"
+	>
 		<IconArrowLeft class="w-6 h-6" />
 		Change Language
 	</a>
