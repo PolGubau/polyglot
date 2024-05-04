@@ -1,17 +1,16 @@
 <script lang="ts">
-	import { tweened } from 'svelte/motion';
 	import type { Question } from '../../types';
 	interface Props {
 		questions: Question[];
+		end: boolean;
 	}
-	let { questions }: Props = $props();
+	let { questions, end = $bindable(false) }: Props = $props();
 	import Card from './Card.svelte';
-	import { cubicOut } from 'svelte/easing';
+	import Progress from './Progress.svelte';
 
 	let position = $state(0);
-	let end = false;
 
-	const onAnswer = () => {
+	const onAnswer = ({ correct, cardId }: { correct: boolean; cardId: Question['id'] }) => {
 		if (questions[position + 1]) {
 			position += 1;
 		} else {
@@ -19,18 +18,20 @@
 		}
 	};
 
-	let percentage = $derived((position / (questions.length - 1)) * 100);
+	let percentage = $derived(Math.floor((position / (questions.length - 1)) * 100));
 </script>
 
-<!-- progressbar -->
+<section class="grid grid-rows-[auto,1fr] gap-4 max-w-xl w-full h-full">
+	<nav class="flex gap-2 items-center">
+		<a
+			href="/play"
+			class="w-[26px] h-[26px] outline-none p-0.5 aspect-square rounded-full transition-all border-none ring-0 focus:ring-2 hover:animate-pulse ring-dark"
+		>
+			<img src="/icons/arrow-left.svg" width="30" height="30" alt="arrow-left" />
+		</a>
 
-<section class="flex flex-col gap-4 w-full md:max-w-xl">
-	<progress
-		max="100"
-		value={percentage}
-		class=" w-full [&::-webkit-progress-bar]:rounded-full [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-slate-300 [&::-moz-progress-bar]:bg-violet-400 [&::-webkit-progress-value]:transition-all [&::-webkit-progress-value]:duration-500 [&::-webkit-progress-value]:bg-dark"
-	>
-	</progress>
+		<Progress {percentage} />
+	</nav>
 
 	<Card question={questions[position]} {onAnswer} />
 </section>

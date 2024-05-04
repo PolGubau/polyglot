@@ -8,6 +8,9 @@ dependencies:
   '@sveltejs/adapter-vercel':
     specifier: ^5.3.0
     version: 5.3.0(@sveltejs/kit@2.5.7)
+  '@tabler/icons-svelte':
+    specifier: ^3.3.0
+    version: 3.3.0(svelte@5.0.0-next.123)
 
 devDependencies:
   '@playwright/test':
@@ -638,6 +641,19 @@ packages:
       vitefu: 0.2.5(vite@5.2.11)
     transitivePeerDependencies:
       - supports-color
+
+  /@tabler/icons-svelte@3.3.0(svelte@5.0.0-next.123):
+    resolution: {integrity: sha512-1NJvaT6w68j3y1c8lJSohRFKzpRT4LcTK7pPW1kGN7JXPJfh2efIw705dA0jxuwRClMrTxZt8BmEd6TRKQMqtA==}
+    peerDependencies:
+      svelte: '>=3 <5'
+    dependencies:
+      '@tabler/icons': 3.3.0
+      svelte: 5.0.0-next.123
+    dev: false
+
+  /@tabler/icons@3.3.0:
+    resolution: {integrity: sha512-PLVe9d7b59sKytbx00KgeGhQG3N176Ezv8YMmsnSz4s0ifDzMWlp/h2wEfQZ0ZNe8e377GY2OW6kovUe3Rnd0g==}
+    dev: false
 
   /@types/cookie@0.6.0:
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}

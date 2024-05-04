@@ -3,7 +3,7 @@
 	import { ROUTES } from '$lib/routes';
 </script>
 
-<nav class="p-2 flex gap-1 w-full justify-center">
+<nav class="p-2 flex gap-1 w-full h-fit justify-center">
 	{#each ROUTES as { path, label }}
 		<a
 			href={path === '/' ? '/' : path}
