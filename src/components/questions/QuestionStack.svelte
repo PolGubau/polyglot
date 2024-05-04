@@ -25,11 +25,10 @@
 <!-- progressbar -->
 
 <section class="flex flex-col gap-4 w-full md:max-w-xl">
-	{percentage}
 	<progress
 		max="100"
 		value={percentage}
-		class=" w-full [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-slate-300 [&::-webkit-progress-value]:bg-violet-400 [&::-moz-progress-bar]:bg-violet-400 [&::-webkit-progress-value]:transition-all [&::-webkit-progress-value]:duration-500"
+		class=" w-full [&::-webkit-progress-bar]:rounded-full [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-slate-300 [&::-moz-progress-bar]:bg-violet-400 [&::-webkit-progress-value]:transition-all [&::-webkit-progress-value]:duration-500 [&::-webkit-progress-value]:bg-dark"
 	>
 	</progress>
 
