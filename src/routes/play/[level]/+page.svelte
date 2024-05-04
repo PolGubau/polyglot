@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { IconArrowLeft } from '@tabler/icons-svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -11,7 +12,12 @@
 
 <main class="h-full w-full justify-center items-center flex p-4">
 	{#if end}
-		<h1>Congratulations</h1>
+		<article class="flex flex-col gap-4 items-center justify-center">
+			<h1 class="text-xl md:text-3xl font-bold uppercase">Congratulations</h1>
+			<a href="/play" class="bg-main rounded-2xl px-4 py-2 flex text-xl items-center gap-2">
+				<IconArrowLeft />Go back</a
+			>
+		</article>
 	{:else}
 		{#await data.level.questions}
 			Loading...
