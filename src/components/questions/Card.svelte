@@ -65,7 +65,7 @@
 						}}
 						class={`w-full p-4 rounded-xl  ring-0 transition-all text-center  hover:brightness-90 focus-visible:brightness-75 text-lg font-semibold
 					  ${selectedAnswer === answer ? 'shadow-xl' : undefined}
-  					${selectedAnswer != answer || isCorrect === 'idle' ? 'bg-main' : undefined}
+  					${selectedAnswer != answer || isCorrect === 'idle' ? 'bg-dark/30' : undefined}
   					${selectedAnswer === answer && isCorrect === true ? 'bg-green-400' : undefined}
 					${selectedAnswer === answer && isCorrect === false ? 'bg-red-400' : undefined}
 					${selectedAnswer === answer ? 'ring-2 ring-dark' : undefined}
@@ -82,8 +82,8 @@
 				bind:value={selectedAnswer}
 				type="text"
 				placeholder="Type your answer here"
-				class={`w-full p-4 rounded-xl text-center 
-				${isCorrect === 'idle' ? 'bg-orange-300' : undefined} 
+				class={`w-full p-4 rounded-xl text-center placeholder:text-neutral-800 outline-none transition-all focus:ring-2 focus:ring-dark
+				${isCorrect === 'idle' ? 'bg-dark/30' : undefined} 
 				${isCorrect === true ? 'bg-green-300' : undefined} 
 				${isCorrect === false ? 'bg-red-300' : undefined}`}
 				onkeydown={(e) => {
@@ -103,7 +103,7 @@
 		{/if}
 	</div>
 	<button
-		class="bg-orange-800 text-xl p-4 rounded-xl text-background font-semibold"
+		class="bg-dark text-xl p-4 rounded-xl text-background font-semibold"
 		onclick={checkAnswer}
 	>
 		Validate
