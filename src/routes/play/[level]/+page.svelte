@@ -13,7 +13,9 @@
 	{#if end}
 		<h1>Congratulations</h1>
 	{:else}
-		{#await data.level.questions then questions}
+		{#await data.level.questions}
+			Loading...
+		{:then questions}
 			{#if questions.length === 0}
 				<h1>No questions</h1>
 			{/if}

@@ -127,7 +127,7 @@
 		"level": 1,
 		"title": "What color is the German flag?",
 		"type": "multiple-choice",
-		"wrongAnswers": ["Rot", "Gelb", "Blau"],
+		"wrongAnswers": ["Grün", "Gelb", "Blau"],
 		"answer": "Schwarz"
 	},
 	{
@@ -544,7 +544,7 @@
 		"level": 1,
 		"title": "___ sind meine Schuhe?",
 		"type": "multiple-choice",
-		"wrongAnswers": ["Wer", "Was", "Wo"],
+		"wrongAnswers": ["Wer", "Was", "Wann"],
 		"answer": "Wo"
 	},
 	{
@@ -568,7 +568,7 @@
 		"level": 1,
 		"title": "Der Stuhl ___ blau.",
 		"type": "multiple-choice",
-		"wrongAnswers": ["ist", "hat", "sind"],
+		"wrongAnswers": ["isst", "hat", "sind"],
 		"answer": "ist"
 	},
 	{

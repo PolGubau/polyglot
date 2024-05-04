@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { IconArrowLeft } from '@tabler/icons-svelte';
+
 	import type { Question } from '../../types';
 	interface Props {
 		questions: Question[];
@@ -27,7 +29,7 @@
 			href="/play"
 			class="w-[26px] h-[26px] outline-none p-0.5 aspect-square rounded-full transition-all border-none ring-0 focus:ring-2 hover:animate-pulse ring-dark"
 		>
-			<img src="/icons/arrow-left.svg" width="30" height="30" alt="arrow-left" />
+			<IconArrowLeft />
 		</a>
 
 		<Progress {percentage} />
