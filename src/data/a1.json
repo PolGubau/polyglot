@@ -448,7 +448,7 @@
 		"level": 1,
 		"title": "___ ist dein Name?",
 		"type": "multiple-choice",
-		"wrongAnswers": ["Wie", "Wo", "Was"],
+		"wrongAnswers": ["Wie", "Wo", "Wann"],
 		"answer": "Was"
 	},
 	{
@@ -512,7 +512,7 @@
 		"level": 1,
 		"title": "Der Hund ___ im Garten.",
 		"type": "multiple-choice",
-		"wrongAnswers": ["ist", "sind", "hat"],
+		"wrongAnswers": ["son", "sind", "hat"],
 		"answer": "ist"
 	},
 	{
