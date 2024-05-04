@@ -7,7 +7,6 @@
 	import QuestionStack from '../../../components/questions/QuestionStack.svelte';
 
 	let end = $state(false);
-	$inspect(end);
 </script>
 
 <main class="h-full w-full justify-center items-center flex p-4">
