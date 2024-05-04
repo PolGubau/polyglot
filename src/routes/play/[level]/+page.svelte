@@ -7,6 +7,7 @@
 	import QuestionStack from '../../../components/questions/QuestionStack.svelte';
 
 	let end = $state(false);
+	let points = $state(0);
 </script>
 
 <main class="h-full w-full justify-center items-center flex p-4">
@@ -24,7 +25,7 @@
 			{#if questions.length === 0}
 				<h1>No questions</h1>
 			{/if}
-			<QuestionStack {questions} bind:end />
+			<QuestionStack {questions} bind:end bind:points />
 		{/await}
 	{/if}
 </main>
