@@ -552,7 +552,7 @@
 		"level": 1,
 		"title": "Sie ___ Pizza.",
 		"type": "multiple-choice",
-		"wrongAnswers": ["isst", "trinkt", "sieht"],
+		"wrongAnswers": ["ist", "trinkt", "sieht"],
 		"answer": "isst"
 	},
 	{
