@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { IconArrowLeft } from '@tabler/icons-svelte';
+	import punctuation from './points';
 
 	import type { Question } from '../../types';
 	interface Props {
@@ -9,10 +10,14 @@
 	let { questions, end = $bindable(false) }: Props = $props();
 	import Card from './Card.svelte';
 	import Progress from './Progress.svelte';
+	let points = punctuation().points;
 
 	let position = $state(0);
 
 	const onAnswer = ({ correct, cardId }: { correct: boolean; cardId: Question['id'] }) => {
+		if (correct) {
+			punctuation().increment();
+		}
 		if (questions[position + 1]) {
 			position += 1;
 		} else {
@@ -24,6 +29,7 @@
 </script>
 
 <section class="grid grid-rows-[auto,1fr] gap-4 max-w-xl w-full h-full">
+	{points}
 	<nav class="flex gap-2 items-center">
 		<a
 			href="/play"

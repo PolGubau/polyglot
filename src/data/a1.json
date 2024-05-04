@@ -304,7 +304,7 @@
 		"level": 1,
 		"title": "Mein ___ ist kaputt.",
 		"type": "multiple-choice",
-		"wrongAnswers": ["Auto", "Haus", "Blume"],
+		"wrongAnswers": ["Bücher", "Haus", "Blume"],
 		"answer": "Fahrrad"
 	},
 	{
@@ -440,7 +440,7 @@
 		"level": 1,
 		"title": "Das ___ ist grün.",
 		"type": "multiple-choice",
-		"wrongAnswers": ["Blume", "Auto", "Tisch"],
+		"wrongAnswers": ["Finger", "Auto", "Tisch"],
 		"answer": "Gras"
 	},
 	{
